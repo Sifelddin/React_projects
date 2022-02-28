@@ -1,3 +1,4 @@
+/* eslint-disable no-eval */
 import React , {useState, useRef , useEffect} from 'react'
 import styled from 'styled-components'
 
