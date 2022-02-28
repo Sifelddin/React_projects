@@ -16,7 +16,7 @@ const Currency = () => {
     const getData = async () => {
       // api fetched from https://app.exchangerate-api.com/
       try{
-     let response = await axios.get('https://v6.exchangerate-api.com/v6/469d9f139e534d727572658a/latest/USD')
+     let response = await axios.get(`https://v6.exchangerate-api.com/v6/${process.env.REACT_APP_EXCHANGERATE_KEY}`)
      setCurrencies(response.data.conversion_rates)
     }catch(error){
       console.error(error)

@@ -9,18 +9,7 @@ const Calculator = () => {
     const resultValue = useRef("");
     const [isPoint , setIsPoint] = useState(true)
     const [prev , setPrev] = useState("")
-    const addOperator = (arg) => {
-     let regExp = /[÷|+|x|-]{1}$/
-
-        if(!prev && arg === "-" && !regExp.test(prev)){
-            return setPrev(prev.concat(arg))
-          }
-        if(regExp.test(prev)){
-            return
-        }
-       prev && setPrev(prev.concat(arg)); setIsPoint(true)
-    }
-    
+   
     const hundleClick = (e) => {
         
         switch(e.target.innerText){
@@ -47,6 +36,18 @@ const Calculator = () => {
         }      
     }
 
+    const addOperator = (arg) => {
+        let regExp = /[÷|+|x|-]{1}$/
+   
+           if(!prev && arg === "-" && !regExp.test(prev)){
+               return setPrev(prev.concat(arg))
+             }
+           if(regExp.test(prev)){
+               return
+           }
+          prev && setPrev(prev.concat(arg)); setIsPoint(true)
+       }
+       
     const deleteNum = () => prev ? setPrev(prev.slice(0 , -1)) : "";
     const equal = () => {
        setPrev(resultValue.current.toString());

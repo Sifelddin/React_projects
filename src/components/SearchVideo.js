@@ -29,10 +29,6 @@ const SearchMovies = () => {
        setPageUrl(`https://apimovies.fr/api/movies/search?search=${e.target.value}`)
        apiEndPoint.current = `https://apimovies.fr/api/movies/search?search=${e.target.value}`
       }   
-    console.log(fetchedData);
-    console.log(apiEndPoint.current);
-    console.log(searchWord);
-  
 if (videoId) {
 
   return (

@@ -27,6 +27,7 @@ padding: 1rem;
 height: 100vh;
 width: 25%;
 font-size: large;
+line-height: 1.5;
 a{
     text-decoration: none;
 }
